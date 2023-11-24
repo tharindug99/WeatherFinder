@@ -3,7 +3,7 @@ import React from 'react'
 export default function Footer() {
   return (
     <div>
-        <div className="fixed bottom-0 w-full bg-black/90 py-20 text-white text-center">
+        <div className=" bottom-0 w-full bg-black/90 py-20 text-white text-center">
                 <div className="text-white align-center center text-center">
                     TNG Productions &copy; 2023 
                 </div>

@@ -69,7 +69,7 @@ export default function Home() {
   };
 
   return (
-    <div className="m-5 rounded-md max-h-full bg-gradient-to-r from-cyan-500 to-blue-500">
+    <div className="m-10 rounded-md max-h-full bg-gradient-to-r from-cyan-500 to-blue-500">
       <div className="mx-10 p-10 search flex flex-col items-center sm:flex-row sm:items-start">
         <input
           type="text"
@@ -99,9 +99,9 @@ export default function Home() {
       ) : null}
 
       {!loading && weatherData ? (
-        <div className="mt-5 p-1 flex-wrap justify-center text-center text-white details flex-row flex space-x-5 ">
+        <div className="mt-5 flex-wrap justify-center text-center text-white details flex-row flex space-x-5 ">
           {/* Humidity ----------------------------*/}
-          <div className="col py-10 px-10 mb-8 border-4 border-white hover:border-blue-900 cursor-pointer rounded-md">
+          <div className="col p-10 mb-8 border-4 border-white hover:border-blue-900 cursor-pointer rounded-md">
             <WiHumidity className="text-4xl text-blue-900 ml-3" />
             <p>Humidity</p>
             <p>{weatherData.main.humidity}</p>
