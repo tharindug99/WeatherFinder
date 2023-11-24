@@ -6,7 +6,7 @@ import reactIconsWi from 'react-icons/wi';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base:"/WeatherFinder/",
+  base:"/WeatherFinder",
   build: {
     rollupOptions: {
       external: [
