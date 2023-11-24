@@ -6,6 +6,7 @@ import { TiWeatherShower, TiWeatherCloudy, TiWeatherNight, TiWeatherPartlySunny,
 import { WiSunrise } from "react-icons/wi";
 import { WiSunset } from "react-icons/wi";
 import { FaCloud } from "react-icons/fa";
+import { Audio } from 'react-loader-spinner'
 
 function convertUnixTimestampToTime(unixTimestamp) {
   const date = new Date(unixTimestamp * 1000);
@@ -87,7 +88,15 @@ export default function Home() {
       </div>
 
       {loading ? (
-        <div>Loading...</div>
+        <div className="flex m-10 p-10 justify-center"><Audio
+                  height="80"
+                  width="80"
+                  radius="9"
+                  color="white"
+                  ariaLabel="loading"
+                  wrapperStyle
+                  wrapperClass
+      /></div>
       ) : weatherData ? (
         <div className="flex flex-col items-center">
           {/* <TiWeatherShower className="text-9xl text-white mb-5" /> */}
