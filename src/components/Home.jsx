@@ -69,7 +69,7 @@ export default function Home() {
   };
 
   return (
-    <div className="m-10 rounded-md max-h-full bg-gradient-to-r from-cyan-500 to-blue-500">
+    <div className="m-3 rounded-md max-h-full bg-gradient-to-r from-cyan-500 to-blue-500">
       <div className="mx-10 p-10 search flex flex-col items-center sm:flex-row sm:items-start">
         <input
           type="text"
