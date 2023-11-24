@@ -101,26 +101,26 @@ export default function Home() {
       {!loading && weatherData ? (
         <div className="mt-5 flex-wrap justify-center text-center text-white details flex-row flex space-x-5 ">
           {/* Humidity ----------------------------*/}
-          <div className="col p-10 mb-8 border-4 border-white hover:border-blue-900 cursor-pointer rounded-md">
-            <WiHumidity className="text-4xl text-blue-900 ml-3" />
+          <div className="col p-10 mb-8 border-4 border-white hover:border-blue-900 hover:bg-blue-900 cursor-pointer rounded-md">
+            <WiHumidity className="text-4xl text-white ml-3" />
             <p>Humidity</p>
             <p>{weatherData.main.humidity}</p>
           </div>
           {/* Wind Speed ----------------------------*/}
-          <div className="col py-9 px-8 mb-8 border-4 border-white hover:border-teal-800 cursor-pointer rounded-md">
-            <LuWind className="text-4xl text-teal-800 ml-5" />
+          <div className="col py-9 px-8 mb-8 border-4 border-white hover:border-teal-900 hover:bg-teal-900 cursor-pointer rounded-md">
+            <LuWind className="text-4xl text-white ml-5" />
             <p>Wind Speed</p>
             <p>{weatherData.wind.speed} m/s</p>
           </div>
           {/* Sunrise ----------------------------*/}
-          <div className="col p-10 mb-8 border-4 border-white hover:border-yellow-400 cursor-pointer rounded-md">
-            <WiSunrise className="text-4xl text-yellow-400 ml-4" />
+          <div className="col p-10 mb-8 border-4 border-white hover:border-yellow-400 hover:bg-yellow-400 cursor-pointer rounded-md">
+            <WiSunrise className="text-4xl text-white ml-4" />
             <p>Sunrise at</p>
             <p>{convertUnixTimestampToTime(weatherData.sys.sunrise)}</p>
           </div>
           {/* Sunset ----------------------------*/}
-          <div className="col p-10 mb-8 border-4 border-white hover:border-orange-500 cursor-pointer rounded-md">
-            <WiSunset className="text-4xl text-orange-500 ml-4" />
+          <div className="col p-10 mb-8 border-4 border-white hover:border-orange-500 hover:bg-orange-500 cursor-pointer rounded-md">
+            <WiSunset className="text-4xl text-white ml-4" />
             <p>Sunset at</p>
             <p>{convertUnixTimestampToTime(weatherData.sys.sunset)}</p>
           </div>
