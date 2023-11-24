@@ -107,8 +107,8 @@ export default function Home() {
             <p>{weatherData.main.humidity}</p>
           </div>
           {/* Wind Speed ----------------------------*/}
-          <div className="col p-10 mb-8 border-4 border-white hover:border-teal-800 cursor-pointer rounded-md">
-            <LuWind className="text-4xl text-teal-800 ml-6" />
+          <div className="col py-9 px-8 mb-8 border-4 border-white hover:border-teal-800 cursor-pointer rounded-md">
+            <LuWind className="text-4xl text-teal-800 ml-5" />
             <p>Wind Speed</p>
             <p>{weatherData.wind.speed} m/s</p>
           </div>
