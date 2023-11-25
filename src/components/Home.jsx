@@ -108,7 +108,8 @@ export default function Home() {
                   wrapperClass
       /></div>
       ) : weatherData ? (
-        <div className="flex flex-col items-center">
+        <div  
+              className="flex flex-col items-center">
           {/* <TiWeatherShower className="text-9xl text-white mb-5" /> */}
           {weatherIconMappings[weatherData.weather[0].main]}
           <h1 className="text-2xl text-white mb-5">{weatherData.main.temp}°C</h1>
