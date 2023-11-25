@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from "framer-motion"
 import { WiHumidity } from "react-icons/wi";
 import { IoSearchOutline } from 'react-icons/io5';
 import { LuWind } from "react-icons/lu";
@@ -79,13 +80,22 @@ export default function Home() {
           onChange={handleInputChange}
           className="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-4 pr-3 shadow-sm focus:outline-none focus:border-teal-500 focus:ring-orange-600 sm:text-sm mb-2 sm:mb-0 sm:mr-2"
         />
+
+      <motion.div
+      className="box"
+      whileHover={{ scale: 1.1 }}
+      transition={{ type: "spring", stiffness: 900, damping: 20 }}
+      >
         <button
           className="my-1 p-1 mx-2 px-2 border-2 border-white rounded-2xl text-white flex items-center"
           onClick={handleSearchClick}
         >
           Search <IoSearchOutline className="ml-1" />
         </button>
+        </motion.div>
       </div>
+
+      
 
       {loading ? (
         <div className="flex m-10 p-10 justify-center"><Audio
@@ -108,32 +118,65 @@ export default function Home() {
       ) : null}
 
       {!loading && weatherData ? (
+        
+    
         <div className="mt-5 flex-wrap justify-center text-center text-white details flex-row flex space-x-5 ">
           {/* Humidity ----------------------------*/}
+          <motion.div
+            className="box"
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 900, damping: 20 }}
+            >
           <div className="col p-10 mb-8 border-4 border-white hover:border-blue-900 hover:bg-blue-900 cursor-pointer rounded-md">
             <WiHumidity className="text-4xl text-white ml-3" />
             <p>Humidity</p>
             <p>{weatherData.main.humidity}</p>
           </div>
+          </motion.div>
+
+
           {/* Wind Speed ----------------------------*/}
-          <div className="col py-9 px-8 mb-8 border-4 border-white hover:border-teal-900 hover:bg-teal-900 cursor-pointer rounded-md">
+          <motion.div
+            className="box"
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 900, damping: 20 }}
+            >  
+          <div className="col py-10 px-8 mb-8 border-4 border-white hover:border-teal-900 hover:bg-teal-900 cursor-pointer rounded-md">
             <LuWind className="text-4xl text-white ml-5" />
             <p>Wind Speed</p>
             <p>{weatherData.wind.speed} m/s</p>
           </div>
+         </motion.div> 
+
+
           {/* Sunrise ----------------------------*/}
+          <motion.div
+            className="box"
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 900, damping: 20 }}
+            >
           <div className="col p-10 mb-8 border-4 border-white hover:border-yellow-400 hover:bg-yellow-400 cursor-pointer rounded-md">
             <WiSunrise className="text-4xl text-white ml-4" />
             <p>Sunrise at</p>
             <p>{convertUnixTimestampToTime(weatherData.sys.sunrise)}</p>
           </div>
+        </motion.div>
+
+
           {/* Sunset ----------------------------*/}
+          <motion.div
+            className="box"
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 900, damping: 20 }}
+            >
           <div className="col p-10 mb-8 border-4 border-white hover:border-orange-500 hover:bg-orange-500 cursor-pointer rounded-md">
             <WiSunset className="text-4xl text-white ml-4" />
             <p>Sunset at</p>
             <p>{convertUnixTimestampToTime(weatherData.sys.sunset)}</p>
           </div>
+          </motion.div>
         </div>
+        
       ) : null}
     </div>
   );
